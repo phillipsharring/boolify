@@ -1,0 +1,20 @@
+{
+    "name": "philsown/boolify",
+    "description": "A PHP Library to make something a boolean.",
+    "keywords": ["php", "library", "boolean", "lolphp"],
+    "homepage": "https://github.com/philsown/boolify",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Phillip Harrington",
+            "email": "philsown@gmail.com",
+            "homepage": "http://phillipharrington.com/",
+            "role": "developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Philsown\\Boolify\\": "src"
+        }
+    }
+}
