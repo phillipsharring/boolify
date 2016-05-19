@@ -10,7 +10,7 @@ This will take a value and return either true or false.
 use Philsown\Boolify\Boolify;
 
 // $someValue has been set previously
-$bool = Boolify::get($someValue);
+$bool = Boolify::cast($someValue);
 
 // $bool is now a boolean
 ```
