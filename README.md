@@ -7,12 +7,15 @@ This will take a value and return either true or false.
 ## Usage
 
 ```lang=php
+<?php
+
 use Philsown\Boolify\Boolify;
 
 // $someValue has been set previously
 $bool = Boolify::cast($someValue);
 
 // $bool is now a boolean
+
 ```
 
 ### True Values
