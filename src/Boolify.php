@@ -42,6 +42,10 @@ class Boolify
             return $value;
         }
 
+        if (null === $value) {
+            return false;
+        }
+
         return null;
     }
 }
