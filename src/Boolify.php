@@ -21,6 +21,7 @@ class Boolify
                 case '0':
                 case 'no':
                 case 'n':
+                case 'n/a':
                     return false;
                     break;
             }
