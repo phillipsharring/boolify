@@ -1,0 +1,8 @@
+.env
+.idea
+.vs-code
+
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log

@@ -1,21 +1,20 @@
 # Boolify
 
-A PHP Library to make something a boolean.
+A PHP Library to make something that's kinda true or false into a genuine boolean.
 
-This will take a value and return either true or false.
+This will take a variety of values and return either true or false.
 
 ## Usage
 
 ```lang=php
 <?php
 
-use Philsown\Boolify\Boolify;
+use Phdc\Boolify\Boolify;
 
 // $someValue has been set previously
 $bool = Boolify::cast($someValue);
 
 // $bool is now a boolean
-
 ```
 
 ### True Values

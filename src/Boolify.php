@@ -1,52 +1,47 @@
 <?php
+declare(strict_types=1);
 
-namespace Philsown\Boolify;
+namespace Phdc\Boolify;
 
 class Boolify
 {
-    public static function cast($value)
+    /**
+     * @param $value
+     * @return bool|null
+     */
+    public static function cast($value): null|bool
     {
-        if (is_string($value)) {
-            $lower = strtolower($value);
-            switch ($lower) {
-                case 'true':
-                case 't':
-                case '1':
-                case 'yes':
-                case 'y':
-                    return true;
-                    break;
-                case 'false':
-                case 'f':
-                case '0':
-                case 'no':
-                case 'n':
-                case 'n/a':
-                    return false;
-                    break;
-            }
-        }
-
-        if (is_int($value)) {
-            return (bool) ($value > 0);
-        }
-
-        if (is_array($value)) {
-            return (bool) !empty($value);
-        }
-
-        if (is_object($value)) {
-            return (bool) !empty($value);
-        }
-
         if (is_bool($value)) {
             return $value;
         }
 
-        if (null === $value) {
-            return false;
+        $boolified = null;
+
+        if (is_string($value)) {
+            $lower = strtolower($value);
+            $boolified = match($lower) {
+                'true', 't', '1', 'yes', 'y' => true,
+                'false', 'f', '0', 'no', 'n', 'n/a', => false,
+                default => null,
+            };
         }
 
-        return null;
+        if (is_int($value)) {
+            $boolified = $value > 0;
+        }
+
+        if (is_array($value)) {
+            $boolified = !empty($value);
+        }
+
+        if (is_object($value)) {
+            $boolified = !empty(get_object_vars($value));
+        }
+
+        if (null === $value) {
+            $boolified = false;
+        }
+
+        return $boolified;
     }
 }

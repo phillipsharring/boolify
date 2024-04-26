@@ -1,20 +1,31 @@
 {
-    "name": "philsown/boolify",
+    "name": "phdc/boolify",
     "description": "A PHP Library to make something a boolean.",
     "keywords": ["php", "library", "boolean", "lolphp"],
-    "homepage": "https://github.com/philsown/boolify",
+    "homepage": "https://github.com/phillipsharring/boolify",
     "license": "MIT",
     "authors": [
         {
             "name": "Phillip Harrington",
-            "email": "philsown@gmail.com",
+            "email": "phillip@phillipharrington.com",
             "homepage": "http://phillipharrington.com/",
             "role": "developer"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Philsown\\Boolify\\": "src"
+            "Phdc\\Boolify\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.34"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
         }
     }
 }
